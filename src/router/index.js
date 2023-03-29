@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TelaDeLogin from '../views/TelaDeLogin.vue'
 import TelaDeCadastro from '../views/TelaDeCadastro'
-import TelaInicial from'../views/Tela-inicial.vue'
+import Home from '../views/Inicio.vue'
 
 const routes = [
   {
@@ -16,8 +16,8 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'Home',
-    component: TelaInicial
+    name: 'inicio',
+    component: Home
   }
 ]
 

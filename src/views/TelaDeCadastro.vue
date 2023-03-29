@@ -10,20 +10,20 @@
 
           <label class="block w-72 mx-8 text-left">
             <span class="text-sm font-semibold uppercase text-branco-semop">Nome completo</span>
-            <input class="p-2 pb-2 mb-2 rounded-lg b-none bg-cinza block w-full text-base pb-1" type="text" name="Nome">
+            <input class="p-2 pb-2 mb-2 rounded-lg b-none bg-cinza block w-full text-base pb-1" type="text" v-model="Nome">
           </label>
 
           <label class="block w-72 mx-8 text-left">
             <span class="text-sm font-semibold uppercase text-branco-semop">Email</span>
-            <input class="p-2 pb-2 mb-2 rounded-lg b-none bg-cinza block w-full text-base pb-1" type="email" name="Email">
+            <input class="p-2 pb-2 mb-2 rounded-lg b-none bg-cinza block w-full text-base pb-1" type="email" v-model="Email">
           </label>
 
           <label class="block w-72 mx-8 text-left">
             <span class="text-sm font-semibold uppercase text-branco-semop">Crie uma senha</span>
-            <input class="p-2 pb-2 mb-2 rounded-lg b-none bg-cinza block w-full text-base pb-1" type="password" name="Senha">
+            <input class="p-2 pb-2 mb-2 rounded-lg b-none bg-cinza block w-full text-base pb-1" type="password" v-model="Senha">
           </label>
 
-          <input class="ml-8" type="checkbox" id="lembrar" name="lembrar" checked>
+          <input class="ml-8" type="checkbox" id="lembrar" v-model="lembrar" checked>
           <label class="mb-2 ml-2 text-sm" for="scales">Lembre-me</label>
 
           <div class="mt-8">
@@ -37,7 +37,16 @@
 </template>
 
 <script>
-
+  export default {
+  data(){
+    return {
+      'Nome': "",
+      'Email': "",
+      'Senha': "",
+      'lembrar': false
+    }
+  }
+}
 </script>
 
 <style scoped>

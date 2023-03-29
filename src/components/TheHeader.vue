@@ -84,7 +84,7 @@
 
     <header class="bg-white shadow">
       <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-        <h1 v-for="item in navigation" :key="item.name" as="a" :href="item.href" class="text-3xl font-bold tracking-tight text-gray-900">{{ item.name }}</h1>
+        <h1 v-for="item in navigation" :key="item.name" v-show="item.current == true" class="text-3xl font-bold tracking-tight text-gray-900">{{ item.name }}</h1>
       </div>
     </header>
     <main>
@@ -106,8 +106,8 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Inicio', href: '#', current: false },
-  { name: 'Funcionários', href: '#', current: true },
+  { name: 'Inicio', href: '#', current: true},
+  { name: 'Funcionários', href: '#', current: false },
   { name: 'Setores', href: '#', current: false },
   { name: 'Empresa', href: '#', current: false },
 ]
