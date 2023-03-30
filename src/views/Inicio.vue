@@ -16,7 +16,8 @@
 
   </conteiner>
   
-  <container class="flex mx-36">
+  <container class="flex mx-36 mb-10">
+
     <div class="text-center h-96 w-3/5 my-5 mr-2 bg-fundo-branco rounded-xl p-10 shadow-[0px_0px_14px_3px_rgba(0,0,0,0.12)]">
       <h1 class="text-xl font-Poppins font-semibold">Aniversariantes do mês</h1>
       <table class="my-6 border-collapse w-full">
@@ -39,9 +40,10 @@
       </table>
     </div>
     <div class="text-center h-96 w-3/5 my-5 ml-2 bg-fundo-branco rounded-xl p-10 shadow-[0px_0px_14px_3px_rgba(0,0,0,0.12)]">
-    
+    <h1 class="text-xl font-Poppins font-semibold">Férias</h1>
     </div>
-  </container>
+ </container>
+  <TheFooter />
 
 
 </div>
@@ -50,10 +52,12 @@
 
 <script>
 import TheHeader from'../components/TheHeader'
+import TheFooter from'../components/TheFooter.vue'
   export default{
     name: 'App',
     components: {
-      TheHeader
+      TheHeader,
+      TheFooter
     },
     data() {
       return{

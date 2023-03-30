@@ -8,7 +8,7 @@
     ```
   -->
   <div class="min-h-full">
-    <Disclosure as="nav" class="bg-azul-imprensa" v-slot="{ open }">
+    <Disclosure as="nav" class="bg-azul-imprensa h-20" v-slot="{ open }">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
@@ -114,7 +114,7 @@ const user = {
 
 const navigation = [
   { name: 'Inicio', href: '/home', current: true},
-  { name: 'Funcionários', href: '/Funcionarios', current: false },
+  { name: 'Funcionários', href: '/Funcionarios', current: false},
   { name: 'Setores', href: '/setor', current: false},
   { name: 'Empresa', href: '/Empresa', current: false },
 ]

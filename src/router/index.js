@@ -5,6 +5,7 @@ import Home from '../views/Inicio.vue'
 import Setores from '../views/Setores.vue'
 import Funcionairos from'../views/Funcionarios.vue'
 import Empresa from'../views/Empresa.vue'
+import Formulario from'../views/Formulario.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/Empresa',
     name: 'empresa',
     component: Empresa
+  },
+  {
+    path: '/Form',
+    name: 'formulario',
+    component: Formulario
   }
 ]
 
