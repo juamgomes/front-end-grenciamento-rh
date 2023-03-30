@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import TelaDeLogin from '../views/TelaDeLogin.vue'
 import TelaDeCadastro from '../views/TelaDeCadastro'
 import Home from '../views/Inicio.vue'
+import Setores from '../views/Setores.vue'
+import Funcionairos from'../views/Funcionarios.vue'
+import Empresa from'../views/Empresa.vue'
 
 const routes = [
   {
@@ -18,6 +21,21 @@ const routes = [
     path: '/home',
     name: 'inicio',
     component: Home
+  },
+  {
+    path: '/Setor',
+    name: 'setores',
+    component: Setores
+  },
+  {
+    path: '/Funcionarios',
+    name: 'funcionarios',
+    component: Funcionairos
+  },
+  {
+    path: '/Empresa',
+    name: 'empresa',
+    component: Empresa
   }
 ]
 
