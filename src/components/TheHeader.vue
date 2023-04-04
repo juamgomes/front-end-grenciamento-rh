@@ -13,18 +13,19 @@
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="w-32 cursor-pointer" src="../assets/Imprensa-logo-branco.png" alt="Your Company" />
+              <img class="w-32 cursor-pointer" src="../assets/Imprensa-logo-branco.svg" alt="Imprensa oficial" />
             </div>
             <div class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-4">
-                <a v-for="item in navigation" :key="item.name" :href="item.href" 
-                :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
-              </div>
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" 
+                :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']"
+                :aria-current="item.current ? 'page' : undefined" @click="updateCurrent(index)">{{ item.name }}</a>
+            </div>
             </div>
           </div>
           <div class="hidden md:block">
             <div class="ml-4 flex items-center md:ml-6">
-              <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <button type="button" class="rounded-full bg- p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                 <span class="sr-only">View notifications</span>
                 <BellIcon class="h-6 w-6" aria-hidden="true" />
               </button>
@@ -104,6 +105,8 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import Vue from 'vue';
+
 
 const user = {
   name: 'Tom Cook',
@@ -118,6 +121,16 @@ const navigation = [
   { name: 'Setores', href: '/setor', current: false},
   { name: 'Empresa', href: '/Empresa', current: false },
 ]
+
+function updateCurrent(index) {
+  this.navigation.forEach((item, i) => {
+    if (i === index) {
+      Vue.set(item, 'current', true);
+    } else {
+      Vue.set(item, 'current', false);
+    }
+  });
+}
 
 const userNavigation = [
   { name: 'Seu perfil', href: '#' },

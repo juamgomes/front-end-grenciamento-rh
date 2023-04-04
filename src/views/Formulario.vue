@@ -79,8 +79,8 @@
 <script>
 import TheHeader from'../components/TheHeader'
 import TheFooter from'../components/TheFooter.vue'
-import FormPaisEstadoECidade from'../components/FormPaisEstadoECidade.vue'
-import CepEEdereco from'../components/CepEEdereco.vue'
+import FormPaisEstadoECidade from'../components/FormularioDeCadastro/FormPaisEstadoECidade.vue'
+import CepEEdereco from'../components/FormularioDeCadastro/CepEEdereco.vue'
 
   export default{
     data(){

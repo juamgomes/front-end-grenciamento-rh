@@ -9,9 +9,7 @@
             <th class="py-3 px-6 text-left">Função</th>
             <th class="py-3 px-6 text-left">E-mail</th>
             <th class="py-3 px-6 text-center">
-              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                Cadastrar funcionário
-              </button>
+              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Novo funcionário</button>
             </th>
           </tr>
         </thead>
@@ -36,6 +34,7 @@
 <script>
 import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
+
 export default{
   name: 'App',
   components: {
@@ -45,6 +44,7 @@ export default{
   App: 'TabelaFuncionarios',
   data() {
     return {
+
       funcionarios: [
         {
           nome: 'João Silva',
